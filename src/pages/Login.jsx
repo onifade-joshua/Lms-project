@@ -7,7 +7,7 @@ import { FaUser, FaLock } from "react-icons/fa";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const { login } = useAuth(); // Use login method from AuthContext
+  const { login } = useAuth(); 
 
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
@@ -39,7 +39,7 @@ const LoginPage = () => {
       setTimeout(() => {
         localStorage.setItem("authToken", "fake-jwt-token");
         localStorage.setItem("userEmail", formData.email);
-        login({ email: formData.email }); // Use login method from context
+        login({ email: formData.email }); 
         navigate("/dashboard");
         setLoading(false);
       }, 1500);

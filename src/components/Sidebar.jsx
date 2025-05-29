@@ -51,7 +51,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             alt="Logo"
             style={{ width: "30px", height: "30px", borderRadius: "50%" }}
           />
-          {isOpen && <span className="ms-2 fw-bold">LMS</span>}
+          {isOpen && <span className="ms-2 fw-bold">Lms Dashboard</span>}
         </div>
         <button 
           className="btn btn-link p-0" 
