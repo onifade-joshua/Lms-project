@@ -7,6 +7,8 @@ import Profile from "./pages/Profile";
 import Calendar from "./pages/EducationCalendar";
 import MessagePage from "./pages/MessagePage";
 import ReportsPage from "./pages/ReportsPage";
+import TaskManagement from "./pages/TaskManagement";
+import QuizExamPage from "./pages/QuizExamPage";
 import { useAuth } from "./context/AuthContext";
 // import Layout from "./layout/Layout";
 
@@ -37,6 +39,14 @@ const App = () => {
       <Route
         path="/reports"
         element={auth ? <ReportsPage /> : <Navigate to="/login" />}
+      />
+      <Route
+        path="/tasks"
+        element={auth ? <TaskManagement /> : <Navigate to="/login" />}
+      />
+      <Route
+        path="/quiz"
+        element={auth ? <QuizExamPage /> : <Navigate to="/login" />}
       />
     </Routes>
   );
