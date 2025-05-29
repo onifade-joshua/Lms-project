@@ -4,7 +4,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
-import Calendar from "./EducationCalendar";
+import Calendar from "./pages/EducationCalendar";
+import MessagePage from "./pages/MessagePage";
 import { useAuth } from "./context/AuthContext";
 // import Layout from "./layout/Layout";
 
@@ -27,6 +28,10 @@ const App = () => {
       <Route
         path="/calendar"
         element={auth ? <Calendar /> : <Navigate to="/login" />}
+      />
+      <Route
+        path="/messages"
+        element={auth ? <MessagePage /> : <Navigate to="/login" />}
       />
     </Routes>
   );

@@ -10,19 +10,19 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 // Import components
-import Header from './components/custom/educationCalendarComponent/Header';
-import BreadcrumbsNav from './components/custom/educationCalendarComponent/BreadcrumbsNav';
-import CalendarControls from './components/custom/educationCalendarComponent/CalendarControls';
-import EventModal from './components/custom/educationCalendarComponent/EventModal';
-import CalendarView from './components/custom/educationCalendarComponent/CalendarView';
-import ListView from './components/custom/educationCalendarComponent/ListView';
-import AnalyticsView from './components/custom/educationCalendarComponent/AnalyticsView';
-import Sidebar from './components/custom/educationCalendarComponent/Sidebar';
+import Header from '../components/custom/educationCalendarComponent/Header';
+import BreadcrumbsNav from '../components/custom/educationCalendarComponent/BreadcrumbsNav';
+import CalendarControls from '../components/custom/educationCalendarComponent/CalendarControls';
+import EventModal from '../components/custom/educationCalendarComponent/EventModal';
+import CalendarView from '../components/custom/educationCalendarComponent/CalendarView';
+import ListView from '../components/custom/educationCalendarComponent/ListView';
+import AnalyticsView from '../components/custom/educationCalendarComponent/AnalyticsView';
+import Sidebar from '../components/custom/educationCalendarComponent/Sidebar';
 
 // Import constants and data
-import { theme } from './theme';
-import { eventTypes, priorityConfig } from './constants';
-import { sampleEvents } from './sampleData';
+import { theme } from '../theme';
+import { eventTypes, priorityConfig } from '../constants';
+import { sampleEvents } from '../sampleData';
 
 const EducationCalendar = () => {
   // State management
