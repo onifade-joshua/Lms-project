@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Calendar from "./pages/EducationCalendar";
 import MessagePage from "./pages/MessagePage";
+import ReportsPage from "./pages/ReportsPage";
 import { useAuth } from "./context/AuthContext";
 // import Layout from "./layout/Layout";
 
@@ -32,6 +33,10 @@ const App = () => {
       <Route
         path="/messages"
         element={auth ? <MessagePage /> : <Navigate to="/login" />}
+      />
+      <Route
+        path="/reports"
+        element={auth ? <ReportsPage /> : <Navigate to="/login" />}
       />
     </Routes>
   );
