@@ -235,7 +235,8 @@ const ReportsPage = () => {
 
   return (
     <div className="container-fluid px-4" style={{ overflowX: 'hidden' }}>
-      <h3 className="my-4">Student Report</h3>
+      <h2 className="mb-1 fw-bold text-dark my-3">Student Report</h2>
+      {/* <h3 className="my-4">Student Report</h3> */}
 
       {/* Tabs */}
       <ul className="nav nav-tabs mb-3">

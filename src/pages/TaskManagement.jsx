@@ -201,7 +201,7 @@ const TaskManagement = () => {
 
   const getRoleIcon = (role) => {
     switch (role) {
-      case 'student': return <BsMortarboard />; // Changed from BsGraduationCap to BsMortarboard
+      case 'student': return <BsMortarboard />; 
       case 'parent': return <BsPeople />;
       case 'teacher': return <BsBook />;
       case 'hod': return <BsPersonCheck />;
@@ -270,7 +270,8 @@ const TaskManagement = () => {
           <Col>
             <div className="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
               <div>
-                <h1 className="display-4 fw-bold text-dark mb-1">Task Management</h1>
+                <h2 className="mb-1 fw-bold text-dark">Task Management</h2>
+                {/* <h2 className="display-4 fw-bold text-dark mb-1">Task Management</h2> */}
                 <p className="text-muted">Manage assignments, projects, and administrative tasks</p>
               </div>
               
@@ -491,7 +492,7 @@ const TaskManagement = () => {
                             </div>
                           </div>
 
-                          <div className="d-flex align-items-center gap-2 ms-3">
+                          <div className="d-flex align-items-center gap-1 ms-1">
                             <OverlayTrigger
                               placement="top"
                               overlay={<Tooltip>View Details</Tooltip>}
@@ -543,7 +544,7 @@ const TaskManagement = () => {
         </Row>
 
         {/* Create Task Modal */}
-        <Modal show={showCreateModal} onHide={() => setShowCreateModal(false)} size="lg">
+        <Modal show={showCreateModal} onHide={() => setShowCreateModal(false)} size="sm">
           <Modal.Header closeButton>
             <Modal.Title>Create New Task</Modal.Title>
           </Modal.Header>

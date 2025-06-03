@@ -81,48 +81,54 @@ const Dashboard = () => {
       >
         <Header toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
 
-        <main className="p-4" style={{ marginTop: "60px" }}>
-          {/* Greeting Section */}
-          <div className="greeting-section mb-4 p-4 bg-light rounded shadow-sm">
-            <div className="d-flex justify-content-between align-items-center">
-              <div>
-                <h2 className="h4 mb-1 text-primary">
+        <main className="p-2 p-md-4" style={{ marginTop: "60px" }}>
+          {/* Mobile Responsive Greeting Section */}
+          <div className="greeting-section mb-3 mb-md-4 p-3 p-md-4 bg-light rounded shadow-sm">
+            <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+              <div className="mb-2 mb-md-0">
+                <h2 className="h5 h4-md mb-1 text-primary">
                   {getGreeting()}, {userName}! 👋
                 </h2>
-                <p className="text-muted mb-0">
-                  <i className="bi bi-calendar3 me-2"></i>
-                  {formatDate(currentDateTime)}
-                  <span className="mx-2">•</span>
-                  <i className="bi bi-clock me-2"></i>
-                  {formatTime(currentDateTime)}
-                </p>
+                <div className="d-flex flex-column flex-sm-row text-muted mb-0">
+                  <span className="me-sm-3 mb-1 mb-sm-0">
+                    <i className="bi bi-calendar3 me-2"></i>
+                    <span className="d-inline d-sm-none">{formatDate(currentDateTime).split(',')[0]}</span>
+                    <span className="d-none d-sm-inline">{formatDate(currentDateTime)}</span>
+                  </span>
+                  <span>
+                    <i className="bi bi-clock me-2"></i>
+                    {formatTime(currentDateTime)}
+                  </span>
+                </div>
               </div>
-              <div className="text-end">
-                <small className="text-muted">Welcome back to your dashboard</small>
+              <div className="text-start text-md-end">
+                <small className="text-muted d-none d-md-inline">Welcome back to your dashboard</small>
               </div>
             </div>
           </div>
 
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <h1 className="h3">Dashboard</h1>
-            <button className="btn btn-primary">
+          {/* Mobile Responsive Dashboard Header */}
+          <div className="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mb-3 mb-md-4 gap-2 gap-sm-0">
+            <h1 className="h4 h3-md mb-2 mb-sm-0">Dashboard</h1>
+            <button className="btn btn-primary btn-sm btn-md-normal w-50 w-sm-auto">
               <i className="bi bi-plus-lg me-2"></i>
-              New Project
+              <span className="d-inline d-sm-none">Add Project</span>
+              <span className="d-none d-sm-inline">New Project</span>
             </button>
           </div>
 
           {/* Stats Cards Component */}
           <StatsCards />
 
-          <div className="row g-3">
-            <div className="col-md-8">
+          <div className="row g-2 g-md-3">
+            <div className="col-12 col-lg-8">
               <RecentActivity />
               
               {/* Chart Section Component */}
               <ChartSection />
             </div>
 
-            <div className="col-md-4">
+            <div className="col-12 col-lg-4">
               <UpcomingTask />
               <TeamMembers />
             </div>
